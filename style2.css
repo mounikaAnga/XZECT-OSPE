@@ -1,0 +1,238 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+}
+
+nav {
+    height: 80px;
+    background: white;
+    box-shadow: 0 3px 15px rgba(0, 0, 0, .4);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+    position: relative;
+}
+
+nav .logo1 {
+    height: 70px;
+    margin-right: 20px;
+}
+
+nav .logo {
+    color: #000;
+    font-size: 33px;
+    font-weight: bold;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+}
+
+.nav-toggle {
+    display: none;
+}
+
+.nav-toggle-label {
+    display: none;
+    cursor: pointer;
+}
+
+.nav-toggle-label span {
+    display: block;
+    width: 30px;
+    height: 3px;
+    background: black;
+    margin: 5px 0;
+    transition: 0.3s;
+}
+
+.nav-menu {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    position: relative;
+    margin-left: 20px;
+}
+
+nav ul li a {
+    display: block;
+    padding: 10px 15px;
+    text-decoration: none;
+    color: #000;
+}
+
+@media (max-width: 768px) {
+    .nav-menu {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background: white;
+        position: absolute;
+        top: 80px;
+        left: 0;
+        box-shadow: 0 3px 15px rgba(0, 0, 0, .4);
+    }
+
+    .nav-toggle:checked + .nav-toggle-label + .nav-menu {
+        display: flex;
+    }
+
+    .nav-toggle-label {
+        display: block;
+    }
+
+    .nav-menu li {
+        width: 100%;
+        margin: 0;
+    }
+
+    .nav-menu li a {
+        width: 100%;
+        padding: 15px;
+    }
+}
+
+.login-container {
+    width: 100%;
+    max-width: 400px;
+    margin: 100px auto;
+    padding: 20px;
+    background: white;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+.login-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.login-form h2 {
+    margin-bottom: 20px;
+    text-align: center;
+    color: #333;
+}
+
+.input-group {
+    margin-bottom: 15px;
+}
+
+.input-group label {
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #333;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+button {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #5cb85c;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #4cae4c;
+}
+
+.message {
+    margin-top: 20px;
+    text-align: center;
+    color: #666;
+}
+
+.message a {
+    color: #5cb85c;
+    text-decoration: none;
+}
+
+.message a:hover {
+    text-decoration: underline;
+}
+footer{
+    background-color: #242121;
+    padding: 20px;
+    display: flex;
+    color:white;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    }
+    
+    .footer-section {
+    flex: 1;
+    min-width: 200px;
+    margin: 10px;
+    }
+    
+    .footer-section h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+    }
+    
+    .footer-section p, .footer-section ul, .footer-section form {
+    font-size: 16px;
+    }
+    
+    .footer-section ul {
+    list-style-type: none;
+    padding: 0;
+    }
+    
+    .footer-section ul li {
+    margin-bottom: 5px;
+    }
+    
+    .footer-section ul li a {
+    text-decoration: none;
+    color: white;
+    }
+    
+    .footer-section ul li a:hover {
+    text-decoration: underline;
+    }
+    
+    .footer-section form {
+    display: flex;
+    flex-direction: column;
+    }
+    
+    .footer-section form input[type="email"] {
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    }
+    
+    .footer-section form button {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #007BFF;
+    color: #fff;
+    cursor: pointer;
+    }
+    
+    .footer-section form button:hover {
+    background-color: #03090f;
+    }
+    .foottext{
+    line-height: 25.5px;
+    color:white;
+    }

@@ -1,0 +1,594 @@
+/* General styling */
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  font-family: sans-serif;
+  user-select: none;
+  overflow-x: hidden; /* Ensure no horizontal overflow */
+}
+
+nav {
+  height: 80px;
+  background: white;
+  box-shadow: 0 3px 15px rgba(0, 0, 0, .4);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+  position: relative;
+}
+
+nav .logo1 {
+  height: 70px;
+  margin-right: 20px; /* Space between the logo image and the text */
+}
+
+nav .logo {
+  color: #000;
+  font-size: 33px;
+  font-weight: bold;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+}
+
+.nav-toggle {
+  display: none;
+}
+
+.nav-toggle-label {
+  display: none;
+  cursor: pointer;
+}
+
+.nav-toggle-label span {
+  display: block;
+  width: 30px;
+  height: 3px;
+  background: black;
+  margin: 5px 0;
+  transition: 0.3s;
+}
+
+.nav-menu {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li {
+  position: relative;
+  margin-left: 20px; /* Space between menu items */
+}
+
+nav ul li a {
+  display: block;
+  padding: 10px 15px;
+  text-decoration: none;
+  color: #000;
+}
+
+nav ul li ul {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #fff;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+nav ul li:hover ul {
+  display: block;
+}
+
+nav ul li ul li {
+  width: 200px;
+}
+
+nav ul li ul li ul {
+  left: 100%;
+  top: 0;
+}
+
+@media (max-width: 768px) {
+  .nav-menu {
+      display: none;
+      flex-direction: column;
+      width: 100%;
+      background: white;
+      position: absolute;
+      top: 80px;
+      left: 0;
+      box-shadow: 0 3px 15px rgba(0, 0, 0, .4);
+  }
+  
+  .nav-toggle:checked + .nav-toggle-label + .nav-menu {
+      display: flex;
+  }
+  
+  .nav-toggle-label {
+      display: block;
+  }
+  
+  .nav-menu li {
+      width: 100%;
+      margin: 0;
+  }
+  
+  .nav-menu li a {
+      width: 100%;
+      padding: 15px;
+  }
+}
+
+
+nav ul {
+  display: flex;
+  align-items: center;
+}
+
+nav ul li {
+  position: relative;
+}
+
+nav ul li a {
+  color: hsl(199, 51%, 23%);
+  display: block;
+  padding: 0 15px;
+  line-height: 70px;
+  font-size: 20px;
+  background: white;
+  transition: .5s;
+}
+
+nav ul li a:hover,
+nav ul li a.active {
+  color: #23dbdb;
+}
+
+nav ul ul {
+  position: absolute;
+  top: 85px;
+  border-top: 3px solid #23dbdb;
+  opacity: 0;
+  visibility: hidden;
+}
+
+nav ul li:hover > ul {
+  top: 70px;
+  opacity: 1;
+  visibility: visible;
+  transition: .3s linear;
+}
+
+nav ul ul li {
+  width: 150px;
+  border: 1px solid #036d9e;
+  border-top: none;
+  background: hsl(199, 84%, 15%);
+}
+
+nav ul ul ul {
+  top: 0;
+  left: 100%;
+  border-top: none;
+}
+
+nav ul ul li a {
+  line-height: 50px;
+}
+
+nav ul ul li a i {
+  margin-left: 45px;
+}
+
+.hero {
+  background: linear-gradient(225deg, #ffffff 0%, #21D4FD 3%, #B721FF 75%);
+  padding: 50px 20px;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 1000px;
+  margin: auto;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.container img {
+  max-width: 100%;
+  height: auto;
+  padding-right: 20px;
+  flex: 1;
+}
+
+.text, .text1 {
+  color: white;
+  margin: 0;
+}
+
+.text {
+  font-size: 46px;
+}
+
+.text1 {
+  font-size: 46px;
+  margin-bottom: 20px;
+}
+
+.subtitle {
+  font-size: 18px;
+  color: white;
+  margin-top: 20px;
+}
+
+.my-button {
+  background-color: white;
+  border: none;
+  color: black;
+  padding: 15px 50px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 12px;
+  margin-top: 20px;
+}
+
+.content {
+  text-align: center;
+  padding: 50px 20px;
+  background: #f9f9f9;
+}
+
+.centered-text {
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: red;
+}
+
+.headline {
+  font-size: 36px;
+  margin-bottom: 40px;
+}
+
+.headline1 {
+  font-size: 36px;
+  margin-top: -30px;
+  margin-bottom: 50px;
+}
+
+.card {
+  background: white;
+  padding: 20px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  max-width: 400px;
+  min-height: 300px;
+  display: inline-block; /* Flexbox for layout */
+  flex-direction: column; /* Stack elements vertically */
+  align-items: center; /* Align items to the center horizontally */
+  justify-content: center; /* Align items to the center vertically */
+  text-align: center; /* Center text content */
+}
+
+.card img.card-image {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%; /* To make the image circular */
+  margin-bottom: 20px; /* Space between image and text */
+}
+
+.card h3 {
+  margin-bottom: 10px; /* Space between heading and text */
+}
+
+.card p {
+  margin: 0; /* Reset margin */
+  line-height: 1.6;
+}
+
+.card ul li {
+  display: flex;
+  align-items: center; /* Align icon and text vertically */
+  margin-bottom: 10px; /* Space between list items */
+}
+
+.card ul li::before {
+  content: '✔'; /* Correct symbol icon */
+  color: green; /* Icon color */
+  margin-right: 10px; /* Space between icon and text */
+}
+
+.card1 {
+  background: white;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  max-width: 900px; /* Increased width for side text */
+  display: flex;
+  margin: 30px; /* Add margin to space out the cards */
+}
+
+.card1 img.card1-image {
+  width: 60%;
+  height: auto;
+  border-radius: 10px 0 0 10px; /* Rounded corners on left side */
+  object-fit: cover; /* Cover the entire card area with the image */
+}
+
+.card1 .card1-text {
+  padding: 20px;
+  flex: 1;
+  margin-top:30px;
+}
+
+.cards-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.small-card {
+  background: white;
+  padding: 20px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  max-width: 350px; /* Adjusted width for small cards */
+  text-align: center;
+  position: relative;
+  margin: 10px; /* Add margin to space out the cards */
+  display: flex;
+  align-items: center;
+  flex-direction: row; /* Align image and text horizontally */
+}
+.ca-text{
+  line-height: 1.8;
+}
+.small-card img.small-card-image {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  margin-right: 10px; /* Space between image and text */
+}
+
+.small-card .price {
+  color: red;
+  font-size: 20px;
+  font-weight: bold;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  display: flex;
+ 
+  align-items: center;
+}
+
+.small-card .price i {
+  margin-right: 5px;
+}
+
+.small-card p {
+  margin-top: 10px; /* Space below the price */
+  margin-bottom: 20px; /* Space above the students section */
+  line-height: 1.6;
+  text-align: left;
+  width: 100%;
+}
+
+.small-card .students {
+  display: flex;
+  align-items: center;
+  font-size: 16px;
+  color: #555;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.small-card .students i {
+  margin-left: 35px;
+
+}
+.red-para{
+  color:red;
+}
+.extra-card {
+  background: #f9f9f9;
+  padding: 20px;
+  margin-top: 50px;
+  border-radius: 10px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+  max-width: 1000px;
+  text-align: center;
+  margin: auto;
+  overflow: auto; /* Add overflow property */
+}
+
+.extra-card .small-cards1 {
+  display: flex;
+  flex-wrap: wrap; /* Allow the cards to wrap to a new line */
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.extra-card .small-card1 {
+  background: #f9f9f9;
+  padding: 10px;
+  margin: 0 10px;
+  border-radius: 10px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+  max-width: 100px;
+  text-align: center;
+  max-width:700px;
+  margin-bottom: 160px; /* Add margin bottom to separate cards */
+}
+/* Section with three cards */
+.three-cards-section {
+  display: flex;
+  justify-content: space-between;
+}
+
+.card {
+  width: calc(33.33% - 20px); /* Adjust as needed */
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  position: relative;
+  padding: 20px;
+}
+
+.content {
+  margin-bottom: 20px;
+}
+
+.icon-top-right {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+
+.icon-bottom-right {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+}
+
+.star {
+  color: gold;
+}
+
+.person-image {
+  width: 40px; /* Adjust as needed */
+  height: 50px; /* Adjust as needed */
+  border-radius: 50%;
+}
+
+table {
+  width: 100%;
+  
+
+  border-collapse: collapse;
+}
+
+th, td {
+  border: 1px solid lightgray;
+  padding: 15px;
+  height:200px;
+  text-align: center;
+  font-size: 40px;
+}
+
+.icon {
+  margin-right: 8px;
+  height:50px;
+  width:90px;
+ 
+  font-size: 30px; 
+}
+.mini{
+  font-size:20px;
+}
+footer {
+  background-color: #242121;
+  padding: 20px;
+  display: flex;
+  color:white;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.footer-section {
+  flex: 1;
+  min-width: 200px;
+  margin: 10px;
+}
+
+.footer-section h3 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.footer-section p, .footer-section ul, .footer-section form {
+  font-size: 16px;
+}
+
+.footer-section ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.footer-section ul li {
+  margin-bottom: 5px;
+}
+
+.footer-section ul li a {
+  text-decoration: none;
+  color: white;
+}
+
+.footer-section ul li a:hover {
+  text-decoration: underline;
+}
+
+.footer-section form {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer-section form input[type="email"] {
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.footer-section form button {
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: #007BFF;
+  color: #fff;
+  cursor: pointer;
+}
+
+.footer-section form button:hover {
+  background-color: #03090f;
+}
+.foottext{
+  line-height: 25.5px;
+  color:white;
+}
+.social-links {
+  margin-bottom: 15px;
+}
+
+.social-links a {
+  display: inline-block;
+  margin: 0 10px;
+  color: #333;
+  font-size: 20px;
+  transition: color 0.3s ease;
+}
+
+.social-links a:hover {
+  color: #007bff;
+}
+
+p {
+  margin: 0;
+  font-size: 14px;
+  color: #666;
+}

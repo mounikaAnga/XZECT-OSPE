@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title> Course List</title>
+<link rel="stylesheet" href="style3.css"> <!-- Link to external CSS file -->
+</head>
+<body>
+    <nav>
+        <div class="logo-container">
+            <img class="logo1" src="logo.jpg" alt="Logo">
+            <label class="logo">E<b>chooling</b></label>
+        </div>
+        <input type="checkbox" id="nav-toggle" class="nav-toggle">
+        <label for="nav-toggle" class="nav-toggle-label">
+            <span></span>
+        </label>
+        <ul class="nav-menu">
+            <li><a href="html.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="corse.html">Courses</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          
+        </ul>
+    </nav>
+
+<div class="section">
+    <h1>Corses Grid</h1>
+    <br>
+    <br>
+    <p class="p">Groom Your Self!</p>
+</div>
+
+<div class="filters">
+    <div class="filter-item">
+        <label for="language">Language:</label>
+        <select id="language">
+            <option value="all">All</option>
+            <option value="english">English</option>
+            <option value="spanish">Spanish</option>
+            <option value="french">French</option>
+            <!-- Add more options as needed -->
+        </select>
+    </div>
+    <div class="filter-item">
+        <label for="price">Price:</label>
+        <select id="price">
+            <option value="all">All</option>
+            <option value="free">Free</option>
+            <option value="paid">Paid</option>
+        </select>
+    </div>
+    <div class="filter-item">
+        <label for="skill">Skill:</label>
+        <select id="skill">
+            <option value="all">All</option>
+            <option value="beginner">Beginner</option>
+            <option value="intermediate">Intermediate</option>
+            <option value="advanced">Advanced</option>
+        </select>
+    </div>
+</div>
+
+<div class="cards">
+    <div class="card" data-language="english" data-price="free" data-skill="beginner">
+        <img src="inter.jpg" alt="Image 1">
+        <div class="text"><a href="#"><h4>This is an intermediate Spanish course        $89.</h4></a></div>
+        <div class="stars">&#9733; &#9733; &#9733; &#9733; &#9734;</div>
+        <div class="label">3 Years</div>
+    </div>
+    <div class="card" data-language="spanish" data-price="paid" data-skill="intermediate">
+        <img src="inter1.png" alt="Image 2">
+        <div class="text"><a href="#"><h4>Everything You Need to Know
+            About Business.</h4></a></div>
+        <div class="stars">&#9733; &#9733; &#9733; &#9734; &#9734;</div>
+        <div class="label">2 Years</div>
+    </div>
+    <div class="card" data-language="french" data-price="paid" data-skill="advanced">
+        <img src="boy.jpg" alt="Image 3">
+        <div class="text"><a href="#"><h4>The Most Complete Design
+            Thinking Course On The Market.</h4></a></div>
+        <div class="stars">&#9733; &#9733; &#9734; &#9734; &#9734;</div>
+        <div class="label">1 Year</div>
+    </div>
+    <div class="card" data-language="spanish" data-price="paid" data-skill="intermediate">
+        <img src="hi.jpg" alt="Image 2">
+        <div class="text"><a href="#"><h4>Become a UI/UX Designer
+            Everything You need To Know.</h4></a></div>
+        <div class="stars">&#9733; &#9733; &#9733; &#9734; &#9734;</div>
+        <div class="label">2 Years</div>
+    </div>
+    <div class="card" data-language="english" data-price="free" data-skill="beginner">
+        <img src="hello.jpg" alt="Image 1">
+        <div class="text"><a href="#"><h4>Learn Essentials of User Interface
+            Design in Figma.</h4></a></div>
+        <div class="stars">&#9733; &#9733; &#9733; &#9733; &#9734;</div>
+        <div class="label">3 Years</div>
+    </div>
+    <div class="card" data-language="spanish" data-price="paid" data-skill="intermediate">
+        <img src="gm.jpg" alt="Image 2">
+        <div class="text"><a href="#"><h4>AWS Certified Solutions
+            Architect Associate.</h4></a></div>
+        <div class="stars">&#9733; &#9733; &#9733; &#9734; &#9734;</div>
+        <div class="label">2 Years</div>
+    </div>
+
+    <!-- Repeat more cards as needed -->
+</div>
+<footer>
+    <div class="footer-section">
+        <h2>Echooling</h2><br>
+        <p class="foottext">
+            There are course and event custom
+            post types so you can easily create and
+            manage course, events.
+        </p>
+        <p><i class="fas fa-phone icon"></i>+1 234 567 890</p>
+        <p><i class="fas fa-envelope icon"></i>info@eschooling.com</p>
+    </div>
+    <div class="footer-section">
+        <h2>About Us</h2><br>
+        <ul>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Courses</a></li>
+            <li><a href="#">Events</a></li>
+            
+            <li><a href="#">Career</a></li>
+            <li><a href="#">Become a Teacher</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+        
+    </div>
+    <div class="footer-section">
+        <h2>Useful Links</h2><br>
+        <ul>
+            <li><a href="#">Browse Library</a></li>
+            <li><a href="#">Library</a></li>
+            <li><a href="#">Partners</a></li>
+            
+            <li><a href="#">News & Blog</a></li>
+            <li><a href="#">FAQ</a></li>
+            <li><a href="#">Tutorials</a></li>
+        </ul>
+    </div>
+    <div class="footer-section">
+        <h2>New Settler</h2><br>
+        <p class="foottext">Get the latest Echooling news
+            delivered to you inbox</p>
+    </div>
+    <div class="footer-section">
+        <h3>Subscribe</h3>
+        <form>
+            <input type="email" placeholder="Enter your email" required>
+            <button type="submit">Subscribe</button>
+        </form>
+    </div>
+    <div class="social-links">
+        <a href="https://twitter.com/your_twitter_handle" target="_blank" rel="noopener noreferrer"><i class="fab fa-twitter"></i></a>
+        <a href="https://facebook.com/your_facebook_page" target="_blank" rel="noopener noreferrer"><i class="fab fa-facebook"></i></a>
+        <a href="https://instagram.com/your_instagram_account" target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram"></i></a>
+    </div>
+    <p>&copy; 2024 Your Company Name. All rights reserved.</p>
+</footer>
+
+<script src="corses.js"></script> <!-- Link to external JavaScript file -->
+
+</body>
+</html>

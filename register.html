@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <!-- Link to your CSS file -->
+    <nav>
+        <div class="logo-container">
+            <img class="logo1" src="logo.jpg" alt="Logo">
+            <label class="logo">E<b>chooling</b></label>
+        </div>
+        <input type="checkbox" id="nav-toggle" class="nav-toggle">
+        <label for="nav-toggle" class="nav-toggle-label">
+            <span></span>
+        </label>
+        <ul class="nav-menu">
+            <li><a href="html.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="Courses.html">Courses</a></li>
+            <li><a href="Blog.html">Blog</a></li>
+            <li><a href="Contact.html">Contact</a></li>
+            
+        </ul>
+    </nav>
+    <style>
+       body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+}
+
+nav {
+    height: 80px;
+    background: white;
+    box-shadow: 0 3px 15px rgba(0, 0, 0, .4);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+    position: relative;
+}
+
+nav .logo1 {
+    height: 70px;
+    margin-right: 20px;
+}
+
+nav .logo {
+    color: #000;
+    font-size: 33px;
+    font-weight: bold;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+}
+
+.nav-toggle {
+    display: none;
+}
+
+.nav-toggle-label {
+    display: none;
+    cursor: pointer;
+}
+
+.nav-toggle-label span {
+    display: block;
+    width: 30px;
+    height: 3px;
+    background: black;
+    margin: 5px 0;
+    transition: 0.3s;
+}
+
+.nav-menu {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    position: relative;
+    margin-left: 20px;
+}
+
+nav ul li a {
+    display: block;
+    padding: 10px 15px;
+    text-decoration: none;
+    color: #000;
+}
+
+@media (max-width: 768px) {
+    .nav-menu {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background: white;
+        position: absolute;
+        top: 80px;
+        left: 0;
+        box-shadow: 0 3px 15px rgba(0, 0, 0, .4);
+    }
+
+    .nav-toggle:checked + .nav-toggle-label + .nav-menu {
+        display: flex;
+    }
+
+    .nav-toggle-label {
+        display: block;
+    }
+
+    .nav-menu li {
+        width: 100%;
+        margin: 0;
+    }
+
+    .nav-menu li a {
+        width: 100%;
+        padding: 15px;
+    }
+}
+        .container {
+            width: 50%;
+            margin: auto;
+            overflow: hidden;
+            padding: 20px;
+            background-color: #fff;
+            margin-top: 50px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+        input[type="text"], input[type="password"], input[type="email"] {
+            width: 100%;
+            padding: 10px;
+            margin: 5px 0 20px 0;
+            display: inline-block;
+            border: 1px solid #ccc;
+            box-sizing: border-box;
+        }
+        button {
+            background-color: #333;
+            color: white;
+            padding: 10px 20px;
+            margin: 8px 0;
+            border: none;
+            cursor: pointer;
+            width: 100%;
+        }
+        button:hover {
+            opacity: 0.8;
+        }
+        footer{
+    background-color: #242121;
+    padding: 20px;
+    display: flex;
+    color:white;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    }
+    
+    .footer-section {
+    flex: 1;
+    min-width: 200px;
+    margin: 10px;
+    }
+    
+    .footer-section h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+    }
+    
+    .footer-section p, .footer-section ul, .footer-section form {
+    font-size: 16px;
+    }
+    
+    .footer-section ul {
+    list-style-type: none;
+    padding: 0;
+    }
+    
+    .footer-section ul li {
+    margin-bottom: 5px;
+    }
+    
+    .footer-section ul li a {
+    text-decoration: none;
+    color: white;
+    }
+    
+    .footer-section ul li a:hover {
+    text-decoration: underline;
+    }
+    
+    .footer-section form {
+    display: flex;
+    flex-direction: column;
+    }
+    
+    .footer-section form input[type="email"] {
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    }
+    
+    .footer-section form button {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #007BFF;
+    color: #fff;
+    cursor: pointer;
+    }
+    
+    .footer-section form button:hover {
+    background-color: #03090f;
+    }
+    .foottext{
+    line-height: 25.5px;
+    color:white;
+    }
+    </style>
+</head>
+<body>
+   
+
+    <div class="container">
+        <h1>Register</h1>
+        <form action="/submit_registration" method="post">
+            <label for="username">Username</label>
+            <input type="text" id="username" name="username" required>
+            
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required>
+            
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password" required>
+            
+            <label for="confirm_password">Confirm Password</label>
+            <input type="password" id="confirm_password" name="confirm_password" required>
+            
+            <button type="submit">Register</button>
+        </form>
+    </div>
+    <footer>
+        <div class="footer-section">
+            <h2>Echooling</h2><br>
+            <p class="foottext">
+                There are course and event custom
+                post types so you can easily create and
+                manage course, events.
+            </p>
+            <p><i class="fas fa-phone icon"></i>+1 234 567 890</p>
+            <p><i class="fas fa-envelope icon"></i>info@eschooling.com</p>
+        </div>
+        <div class="footer-section">
+            <h2>About Us</h2><br>
+            <ul>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Courses</a></li>
+                <li><a href="#">Events</a></li>
+                
+                <li><a href="#">Career</a></li>
+                <li><a href="#">Become a Teacher</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+            
+        </div>
+        <div class="footer-section">
+            <h2>Useful Links</h2><br>
+            <ul>
+                <li><a href="#">Browse Library</a></li>
+                <li><a href="#">Library</a></li>
+                <li><a href="#">Partners</a></li>
+                
+                <li><a href="#">News & Blog</a></li>
+                <li><a href="#">FAQ</a></li>
+                <li><a href="#">Tutorials</a></li>
+            </ul>
+        </div>
+        <div class="footer-section">
+            <h2>New Settler</h2><br>
+            <p class="foottext">Get the latest Echooling news
+                delivered to you inbox</p>
+        </div>
+        <div class="footer-section">
+            <h3>Subscribe</h3>
+            <form>
+                <input type="email" placeholder="Enter your email" required>
+                <button type="submit">Subscribe</button>
+            </form>
+        </div>
+        <div class="social-links">
+            <a href="https://twitter.com/your_twitter_handle" target="_blank" rel="noopener noreferrer"><i class="fab fa-twitter"></i></a>
+            <a href="https://facebook.com/your_facebook_page" target="_blank" rel="noopener noreferrer"><i class="fab fa-facebook"></i></a>
+            <a href="https://instagram.com/your_instagram_account" target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram"></i></a>
+        </div>
+        <p>&copy; 2024 Your Company Name. All rights reserved.</p>
+    </footer>
+</body>
+</html>
